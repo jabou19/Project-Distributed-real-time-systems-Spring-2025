@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             // ✅ ONLY CHANGE THIS ONE LINE PER TEST CASE!
-            String testFolder = "testcases/7-unschedulable";
+            String testFolder = "../testcases/7-unschedulable";
 
             // Dynamically construct paths
             String taskFile = testFolder + "/tasks.csv";
