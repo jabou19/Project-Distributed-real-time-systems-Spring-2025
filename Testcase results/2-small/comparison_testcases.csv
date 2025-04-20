@@ -1,0 +1,3 @@
+component_id,sim_schedulable,analysis_schedulable,match
+Camera_Sensor,1,000,NO
+Image_Processor,1,000,NO
