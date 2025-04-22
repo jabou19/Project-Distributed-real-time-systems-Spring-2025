@@ -1,5 +1,0 @@
-component_id,alpha,delta,lcm,component_schedulable
-Camera_Sensor,0,556,4,000,1800,0,000
-Image_Processor,0,333,4,000,150,0,000
-Lidar_Sensor,0,333,2,000,200,1,000
-Control_Unit,0,667,3,000,600,1,000

@@ -1,8 +1,0 @@
-component_id,sim_schedulable,analysis_schedulable,match
-Camera_Sensor,1,000,NO
-Bitmap_Processor,1,000,NO
-Lidar_Sensor,1,000,NO
-Image_Processor,1,000,NO
-Control_Unit,1,000,NO
-GPS_Sensor,1,000,NO
-Communication_Unit,1,000,NO
