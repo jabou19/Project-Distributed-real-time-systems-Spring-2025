@@ -28,6 +28,48 @@ graph TD
     style D1 fill:#ffff99
 ```
 
+
+## The hierarchical scheduling structure
+
+```mermaid
+graph TD
+%% Adding line breaks with empty lines (extra spacing)
+    A1.0["Cores"]
+
+
+
+
+    A1["Core_1(EDF)"]
+    A2["Core_2(EDF)"]
+    A3["Core_3(RM)"]
+    A4["Core_4(EDF)"]
+
+
+
+
+    B1["Component<br>Camera Sensor (RM)<br>Tasks: t<sub>0</sub>, t<sub>1</sub>, t<sub>2</sub>, t<sub>3</sub>"]
+    B2["Component<br>Image Processor (EDF)<br>Tasks: t<sub>4</sub>, t<sub>5</sub>"]
+    B3["Component<br>Lidar Sensor (RM)<br>Tasks: t<sub>6</sub>, t<sub>7</sub>, t<sub>8</sub>, t<sub>9</sub>, t<sub>10</sub>, t<sub>11</sub>"]
+    B4["Component<br>GPS Sensor (RM)<br>Tasks: t<sub>12</sub>, t<sub>13</sub>"]
+    B5["Component<br>Communication Unit (RM)<br>Tasks: t<sub>14</sub>, t<sub>15</sub>, t<sub>16</sub>, t<sub>17</sub>"]
+    B6["Component<br>Proximity Sensor (EDF)<br>Tasks: t<sub>18</sub>, t<sub>19</sub>, t<sub>20</sub>"]
+
+
+    A1.0 --> A1
+    A1.0 --> A2
+    A1.0 --> A3
+    A1.0 --> A4
+
+    A1 --> B1
+    A1 --> B2
+    A2 --> B3
+    A3 --> B4
+    A3 --> B5
+    A4 --> B6
+
+    style A1.0 fill:#ff0000
+```
+
 ## `tasks.csv` - Task Set
 
 This file describes the individual tasks within the system.
