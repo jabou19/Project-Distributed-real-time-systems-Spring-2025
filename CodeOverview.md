@@ -1,10 +1,10 @@
-## 🧠 Project Structure & Technical Overview
+## Project Structure & Technical Overview
 
 This project simulates and analyzes a real-time ADAS system using polling servers, rate-monotonic (RM), and earliest-deadline-first (EDF) scheduling. It performs schedulability analysis, response time estimation, and compares simulation results to theoretical analysis.
 
 ---
 
-### 📦 Code Overview: What Each File Does
+### Code Overview: What Each File Does
 
 #### 📁 model/
 
@@ -33,7 +33,7 @@ This project simulates and analyzes a real-time ADAS system using polling server
   - Tracks job release, budget usage, response time, and deadline misses.
   - Outputs `solution_<testname>.csv`
 
-#### 🧠 `Main.java`
+#### `Main.java`
 
 - The entry point:
   - Loads CSVs
@@ -42,7 +42,7 @@ This project simulates and analyzes a real-time ADAS system using polling server
 
 ---
 
-### 📝 Output CSVs — What They Contain
+### Output CSVs — What They Contain
 
 | File Name                       | Description                                               |
 | ------------------------------- | --------------------------------------------------------- |
@@ -54,7 +54,7 @@ This project simulates and analyzes a real-time ADAS system using polling server
 
 ---
 
-### 🔁 Execution Flow
+### Execution Flow
 
 ```plaintext
 Main.java
