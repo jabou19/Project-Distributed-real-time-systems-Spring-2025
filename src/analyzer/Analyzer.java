@@ -10,7 +10,7 @@ import java.util.*;
 public class Analyzer {
 
     public void run(List<Component> components, String testName) {
-        System.out.println("\n=== ANALYSIS TOOL (BDR Check + RTA) ===");
+        System.out.println("\n=== ANALYSIS TOOL (BDR Check + RTA Analysis) ===");
 
         List<String> lines = new ArrayList<>();
         lines.add("component_id,alpha,delta,lcm,component_schedulable");
@@ -46,42 +46,46 @@ public class Analyzer {
                 double sbf = Math.max(0, alpha * (t - delta));
 
                 if (dbf > sbf) {
-                    System.out.printf("❌ Time %d → DBF = %.2f > SBF = %.2f → Not schedulable\n", t, dbf, sbf);
+                    System.out.printf(" Time %d → DBF = %.2f > SBF = %.2f → Not schedulable\n", t, dbf, sbf);
                     allPass = false;
                     break;
                 }
             }
 
-            if (allPass) {
-                System.out.println("✅ Component " + comp.id + " is schedulable.");
-            } else {
-                System.out.println("🚨 Component " + comp.id + " is NOT schedulable.");
-            }
+            String schedulableStr = allPass ? "Schedulable " : "Not Schedulable ";
 
-            String schedulableStr = allPass ? "1" : "0";
+            System.out.println("🔹 BDR Result → " + schedulableStr);
 
+            String csvSchedulable = allPass ? "1" : "0";
+
+            // Add to analysis CSV
             String line = String.join(",",
                     comp.id,
                     String.format(Locale.US, "%.3f", alpha),
                     String.format(Locale.US, "%.3f", delta),
                     String.format(Locale.US, "%.0f", lcm),
-                    schedulableStr
+                    csvSchedulable
             );
             lines.add(line);
 
-            // === RTA Analysis (Fixed-priority only) ===
-            if ("RM".equals(comp.scheduler)) {
+            // === RTA Analysis (Fixed-Priority Only) ===
+            if ("RM".equalsIgnoreCase(comp.scheduler)) {
+                System.out.println("\n🔍 RTA Analysis for Component: " + comp.id);
+
                 for (Task task : comp.tasks) {
                     if (task.priority == null) continue;
+
                     double wcrt = computeWCRT(task, comp.tasks);
                     boolean schedulable = wcrt != -1;
 
-                    System.out.printf("🔍 RTA - Task %s → WCRT: %.2f, Deadline: %.2f → %s\n",
+                    // Print RTA result in console
+                    System.out.printf("   - Task %-10s | WCRT: %-8.2f | Deadline: %-8.2f | %s\n",
                             task.name,
                             (wcrt == -1 ? -1 : wcrt),
                             task.period,
-                            schedulable ? "Schedulable ✅" : "Not Schedulable ❌");
+                            schedulable ? "Schedulable " : "Not Schedulable ");
 
+                    // Save RTA result into CSV
                     String rtaLine = String.join(",",
                             task.name,
                             comp.id,
@@ -94,22 +98,24 @@ public class Analyzer {
             }
         }
 
+        // Write BDR results
         try (FileWriter writer = new FileWriter("analysis_" + testName + ".csv")) {
             for (String line : lines) {
                 writer.write(line + "\n");
             }
-            System.out.println("\n✅ Analysis results written to analysis_" + testName + ".csv");
+            System.out.println("\n BDR Analysis results saved to analysis_" + testName + ".csv");
         } catch (IOException e) {
-            System.out.println("🚨 Error writing analysis CSV: " + e.getMessage());
+            System.out.println(" Error writing analysis CSV: " + e.getMessage());
         }
 
+        // Write RTA results
         try (FileWriter writer = new FileWriter("rta_analysis_" + testName + ".csv")) {
             for (String line : rtaLines) {
                 writer.write(line + "\n");
             }
-            System.out.println(" RTA results written to rta_analysis_" + testName + ".csv");
+            System.out.println(" RTA results saved to rta_analysis_" + testName + ".csv");
         } catch (IOException e) {
-            System.out.println("Error writing RTA CSV: " + e.getMessage());
+            System.out.println(" Error writing RTA CSV: " + e.getMessage());
         }
     }
 
@@ -131,7 +137,6 @@ public class Analyzer {
 
             if (R > task.period) return -1;
         }
-
         return R;
     }
 
