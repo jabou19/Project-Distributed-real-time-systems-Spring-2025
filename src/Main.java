@@ -8,14 +8,15 @@ import sim.Simulator;
 import analyzer.Analyzer;
 import analyzer.Comparison;
 import analyzer.WCRTComparison;
+import utility.Migration;
 
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         try {
-            // ✅ ONLY CHANGE THIS ONE LINE PER TEST CASE!
-            String testFolder = "../testcases/5-huge";
+            // ONLY CHANGE THIS ONE LINE PER TEST CASE!
+            String testFolder = "../testcases/2-small";
 
             // Dynamically construct paths
             String taskFile = testFolder + "/tasks.csv";
@@ -98,6 +99,9 @@ public class Main {
                 }
             }
 
+            // === Perform component migration if needed ===
+            Migration.migrateComponents(components, cores);
+
             // ✅ Run the simulator with dynamic test name
             Simulator simulator = new Simulator();
             simulator.run(cores, 500, testName);
@@ -111,13 +115,8 @@ public class Main {
             WCRTComparison wcrtCompare = new WCRTComparison();
             wcrtCompare.compare(testName);
 
-            
-
-
-
-
         } catch (Exception e) {
-            System.out.println("🚨 Error: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
             e.printStackTrace();
         }
     }
