@@ -1,0 +1,10 @@
+task_name,component_id,task_schedulable,avg_response_time,max_response_time,component_schedulable
+Task_0,Camera_Sensor,1,14.35,18.00,1
+Task_1,Camera_Sensor,1,98.90,108.00,1
+Task_2,Camera_Sensor,1,5.23,7.00,1
+Task_3,Camera_Sensor,1,138.93,192.00,1
+Task_4,Image_Processor,1,10.69,20.00,1
+Task_5,Image_Processor,1,72.69,82.00,1
+Task_6,Image_Processor,1,223.07,323.00,1
+Task_7,Image_Processor,1,168.44,207.00,1
+Task_8,Image_Processor,1,25.60,73.00,1
