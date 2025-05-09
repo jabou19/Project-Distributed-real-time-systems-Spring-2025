@@ -13,10 +13,10 @@ public class WCRTComparison {
         try {
             System.out.println("\n=== WCRT vs Simulation Comparison ===");
 
-            String rtaFile = "rta_analysis_" + testName + ".csv";
-            String simFile = "solution_" + testName + ".csv";
+            String rtaFile = "files/Result/rta_analysis_" + testName + ".csv";
+            String simFile = "files/Result/Simulator_" + testName + ".csv";
 
-            // Read RTA results
+            // ----Read RTA analysis results---
             Map<String, Double> rtaMap = new HashMap<>();
             BufferedReader rtaReader = new BufferedReader(new FileReader(rtaFile));
             String line = rtaReader.readLine(); // skip header
@@ -28,20 +28,20 @@ public class WCRTComparison {
             }
             rtaReader.close();
 
-            // Read Simulation Max RTs
+            // ----Read Simulation Max RTs--
             Map<String, Double> simMap = new HashMap<>();
             BufferedReader simReader = new BufferedReader(new FileReader(simFile));
             line = simReader.readLine(); // skip header
             while ((line = simReader.readLine()) != null) {
                 String[] parts = line.split(",");
                 String taskName = parts[0];
-                double maxRt = Double.parseDouble(parts[2]);
+                double maxRt = Double.parseDouble(parts[4]);
                 simMap.put(taskName, maxRt);
             }
             simReader.close();
 
             List<String> outputLines = new ArrayList<>();
-            outputLines.add("task_name,component_id,wcrt,sim_max_rt,match");
+            outputLines.add("task_name,component_id,analysis_wcrt,simu_max_rt,match");
 
             for (String taskName : rtaMap.keySet()) {
                 double wcrt = rtaMap.get(taskName);
@@ -49,7 +49,7 @@ public class WCRTComparison {
 
                 String match = "NO";
                 if (simRt != -1.0 && wcrt >= 0) {
-                    if (simRt <= wcrt * 1.2) { // 20% tolerance
+                    if (simRt <= wcrt ) { // 20% tolerance
                         match = "YES";
                     }
                 }
@@ -62,7 +62,7 @@ public class WCRTComparison {
             }
 
             // Save to CSV
-            try (FileWriter writer = new FileWriter("wcrt_vs_simulation_" + testName + ".csv")) {
+            try (FileWriter writer = new FileWriter("files/Result/wcrt_analysis vs_simulation_" + testName + ".csv")) {
                 for (String outLine : outputLines) {
                     writer.write(outLine + "\n");
                 }

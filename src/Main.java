@@ -16,8 +16,8 @@ public class Main {
     public static void main(String[] args) {
         try {
             // ONLY CHANGE THIS ONE LINE PER TEST CASE!
-            String testFolder = "../testcases/2-small";
-
+           // String testFolder = "../testcases/2-small";
+            String testFolder = "files/testcases/2-small"; //
             // Dynamically construct paths
             String taskFile = testFolder + "/tasks.csv";
             String componentFile = testFolder + "/budgets.csv";
@@ -25,7 +25,7 @@ public class Main {
 
             // Extract test name from folder path
             String[] parts = testFolder.split("/");
-            String testName = parts[1];  // e.g., "2-small"
+            String testName = parts[2];  // e.g., "2-small"
 
             // === Load data ===
             List<Task> tasks = TaskLoader.loadTasks(taskFile);
@@ -104,7 +104,7 @@ public class Main {
 
             // ✅ Run the simulator with dynamic test name
             Simulator simulator = new Simulator();
-            simulator.run(cores, 500, testName);
+            simulator.run(cores, 100000, testName);
 
             Analyzer analyzer = new Analyzer();
             analyzer.run(components, testName);

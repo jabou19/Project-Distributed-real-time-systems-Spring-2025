@@ -6,15 +6,15 @@ import java.util.*;
 public class Comparison {
 
     public void compare(String testName) {
-        String solutionFile = "solution_" + testName + ".csv";
-        String analysisFile = "analysis_" + testName + ".csv";
-        String outputFile = "comparison_" + testName + ".csv";
+        String solutionFile = "files/Result/Simulator_" + testName + ".csv";
+        String analysisFile = "files/Result/analysis_" + testName + ".csv";
+        String outputFile = "files/Result/comparison_" + testName + ".csv";
 
         Map<String, String> simResults = new HashMap<>();
         Map<String, String> analysisResults = new HashMap<>();
 
         try {
-            // Load simulator results (grouped by component)
+            //---- Load simulator results (grouped by component)---
             BufferedReader simReader = new BufferedReader(new FileReader(solutionFile));
             simReader.readLine(); // skip header
 
@@ -38,7 +38,7 @@ public class Comparison {
                 simResults.put(entry.getKey(), allOk ? "1" : "0");
             }
 
-            // Load analysis results
+            // ----Load analysis results----
             BufferedReader aReader = new BufferedReader(new FileReader(analysisFile));
             aReader.readLine(); // skip header
             while ((line = aReader.readLine()) != null) {
