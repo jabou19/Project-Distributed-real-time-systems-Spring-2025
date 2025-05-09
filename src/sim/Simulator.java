@@ -47,7 +47,10 @@ public class Simulator {
 
                     for (Task task : comp.tasks) {
                         if (t % task.period == 0) {
-                            Job job = new Job(task.name, t, task.wcet, t + (int) task.period);
+                            // --->>>>>>>>>>>>>
+                            //Job job = new Job(task.name, t, task.wcet, t + (int) task.period);
+                            double adjustedWcet = task.wcet / core.speedFactor;
+                            Job job = new Job(task.name, t, adjustedWcet, t + (int) task.period);
                             taskQueues.get(task.name).add(job);
                         }
                     }
@@ -110,11 +113,11 @@ public class Simulator {
             }
         }
 
-        try (FileWriter writer = new FileWriter("solution_" + testName + ".csv")) {
+        try (FileWriter writer = new FileWriter("files/Result/Simulator_" + testName + ".csv")) {
             for (String line : lines) {
                 writer.write(line + "\n");
             }
-            System.out.println("✅ Results written to solution_" + testName + ".csv\n");
+            System.out.println("✅ Results written to simulator_" + testName + ".csv\n");
         } catch (IOException e) {
             System.out.println("🚨 Error writing simulation results: " + e.getMessage());
         }
