@@ -17,6 +17,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\files\Result\Simulator_4-large-test-case.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\files\Result\Simulator_4-large.csv">
           <value>
             <Attribute>
@@ -53,6 +60,13 @@
           </value>
         </entry>
         <entry key="\files\Result\analysis_3-medium.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\files\Result\analysis_4-large-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -150,6 +164,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\files\Result\rta_analysis_4-large-test-case.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\files\Result\rta_analysis_4-large.csv">
           <value>
             <Attribute>
@@ -186,6 +207,13 @@
           </value>
         </entry>
         <entry key="\files\Result\wcrt_analysis vs_simulation_3-medium.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\files\Result\wcrt_analysis vs_simulation_4-large-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
