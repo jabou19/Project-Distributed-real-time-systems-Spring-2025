@@ -12,13 +12,14 @@ public class Simulator {
 
     public void run(List<Core> cores, double simulationTime, String testName) {
         System.out.println("\n=== SIMULATION START (" + simulationTime + " time units) ===\n");
-
+        // her we are going to simulate the system
+        // and write the results to a file CSV
         List<String> lines = new ArrayList<>();
         lines.add("task_name,component_id,task_schedulable,avg_response_time,max_response_time,component_schedulable");
-
+        // Iterate over each core
         for (Core core : cores) {
             System.out.println("--- Simulating Core: " + core.id + " ---");
-
+            // Iterate over each component in the core
             for (Component comp : core.components) {
                 System.out.println(">>> Component: " + comp.id + ", Scheduler: " + comp.scheduler + ", Budget: " + comp.budget + ", Period: " + comp.period);
 
@@ -26,7 +27,6 @@ public class Simulator {
                 Map<String, List<Double>> responseTimes = new HashMap<>();
                 Map<String, Integer> deadlineMisses = new HashMap<>();
                 Map<String, Integer> completedJobs = new HashMap<>();
-
                 for (Task task : comp.tasks) {
                     taskQueues.put(task.name, new LinkedList<>());
                     responseTimes.put(task.name, new ArrayList<>());
@@ -44,17 +44,13 @@ public class Simulator {
                         remainingBudget = budget;
                         nextBudgetReset += period;
                     }
-
                     for (Task task : comp.tasks) {
                         if (t % task.period == 0) {
-                            // --->>>>>>>>>>>>>
-                            //Job job = new Job(task.name, t, task.wcet, t + (int) task.period);
                             double adjustedWcet = task.wcet / core.speedFactor;
                             Job job = new Job(task.name, t, adjustedWcet, t + (int) task.period);
                             taskQueues.get(task.name).add(job);
                         }
                     }
-
                     Task currentTask = selectTask(comp, taskQueues);
                     if (currentTask != null && remainingBudget >= 1.0) {
                         Queue<Job> queue = taskQueues.get(currentTask.name);
@@ -70,7 +66,8 @@ public class Simulator {
                             }
                         }
                     }
-
+                    // Check if any jobs have missed their deadlines, how ?
+                    // by checking if the current time is greater than the job's deadline
                     for (Queue<Job> q : taskQueues.values()) {
                         for (Job job : q) {
                             if (t > job.deadline && !job.countedMiss) {
@@ -80,7 +77,7 @@ public class Simulator {
                         }
                     }
                 }
-
+                // check if the component is schedulable by checking if all the tasks are schedulable
                 boolean componentSchedulable = true;
                 for (int misses : deadlineMisses.values()) {
                     if (misses > 0) {
@@ -88,7 +85,6 @@ public class Simulator {
                         break;
                     }
                 }
-
                 for (Task task : comp.tasks) {
                     List<Double> rts = responseTimes.get(task.name);
                     double avg = rts.stream().mapToDouble(Double::doubleValue).average().orElse(0);
@@ -97,7 +93,6 @@ public class Simulator {
 
                     System.out.printf("Task %-10s → Avg RT: %.2f | Max RT: %.2f | Misses: %d\n",
                             task.name, avg, max, misses);
-
                     int taskSchedulable = (misses == 0) ? 1 : 0;
 
                     // 👇 Locale.US fixes decimal formatting issue
@@ -112,7 +107,7 @@ public class Simulator {
                 }
             }
         }
-
+        // Write the results to a CSV file
         try (FileWriter writer = new FileWriter("files/Result/Simulator_" + testName + ".csv")) {
             for (String line : lines) {
                 writer.write(line + "\n");
@@ -141,8 +136,8 @@ public class Simulator {
     }
 
     static class Job {
-        String taskName;
-        int releaseTime;
+        String taskName;// task name
+        int releaseTime;// release time means the time when the task is released , it is activation time
         int deadline;
         double remainingTime;
         boolean countedMiss = false;

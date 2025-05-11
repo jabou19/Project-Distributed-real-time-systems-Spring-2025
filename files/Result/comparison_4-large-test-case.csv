@@ -1,7 +1,7 @@
 component_id,sim_schedulable,analysis_schedulable,match
 Camera_Sensor,1,0,NO
 Bitmap_Processor,1,0,NO
-Lidar_Sensor,0,0,YES
+Lidar_Sensor,1,0,NO
 Image_Processor,1,1,YES
 Control_Unit,1,1,YES
 GPS_Sensor,1,0,NO
