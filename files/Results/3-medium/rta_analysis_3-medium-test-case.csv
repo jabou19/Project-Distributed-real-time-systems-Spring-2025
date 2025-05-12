@@ -1,0 +1,10 @@
+task_name,component_id,wcrt,deadline,task_schedulable
+Task_0,Camera_Sensor,69.00,100.00,1
+Task_1,Camera_Sensor,22.00,50.00,1
+Task_2,Camera_Sensor,-1.00,300.00,0
+Task_3,Camera_Sensor,84.00,200.00,1
+Task_4,Camera_Sensor,-1.00,900.00,0
+Task_8,Lidar_Sensor,10.00,25.00,1
+Task_9,Lidar_Sensor,90.00,100.00,1
+Task_10,Lidar_Sensor,25.00,50.00,1
+Task_11,Lidar_Sensor,198.00,200.00,1

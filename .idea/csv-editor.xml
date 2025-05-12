@@ -3,14 +3,21 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="\files\Result\Simulator_2-small.csv">
+        <entry key="\files\Result\Simulator_10-unschedulable-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\Result\Simulator_3-medium.csv">
+        <entry key="\files\Result\Simulator_2-small-test-case.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\files\Result\Simulator_3-medium-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -24,14 +31,7 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\Result\Simulator_4-large.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\files\Result\Simulator_5-huge.csv">
+        <entry key="\files\Result\Simulator_5-huge-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -45,21 +45,42 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\Result\Simulator_7-unschedulable.csv">
+        <entry key="\files\Result\Simulator_7-unschedulable-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\Result\analysis_2-small.csv">
+        <entry key="\files\Result\Simulator_8-unschedulable-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\Result\analysis_3-medium.csv">
+        <entry key="\files\Result\Simulator_9-unschedulable-test-case.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\files\Result\analysis_10-unschedulable-test-case.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\files\Result\analysis_2-small-test-case.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\files\Result\analysis_3-medium-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -73,14 +94,7 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\Result\analysis_4-large.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\files\Result\analysis_5-huge.csv">
+        <entry key="\files\Result\analysis_5-huge-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -94,21 +108,42 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\Result\analysis_7-unschedulable.csv">
+        <entry key="\files\Result\analysis_7-unschedulable-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\Result\comparison_2-small.csv">
+        <entry key="\files\Result\analysis_8-unschedulable-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\Result\comparison_3-medium.csv">
+        <entry key="\files\Result\analysis_9-unschedulable-test-case.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\files\Result\comparison_10-unschedulable-test-case.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\files\Result\comparison_2-small-test-case.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\files\Result\comparison_3-medium-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -122,14 +157,7 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\Result\comparison_4-large.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\files\Result\comparison_5-huge.csv">
+        <entry key="\files\Result\comparison_5-huge-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -143,21 +171,42 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\Result\comparison_7-unschedulable.csv">
+        <entry key="\files\Result\comparison_7-unschedulable-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\Result\rta_analysis_2-small.csv">
+        <entry key="\files\Result\comparison_8-unschedulable-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\Result\rta_analysis_3-medium.csv">
+        <entry key="\files\Result\comparison_9-unschedulable-test-case.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\files\Result\rta_analysis_10-unschedulable-test-case.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\files\Result\rta_analysis_2-small-test-case.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\files\Result\rta_analysis_3-medium-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -171,14 +220,7 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\Result\rta_analysis_4-large.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\files\Result\rta_analysis_5-huge.csv">
+        <entry key="\files\Result\rta_analysis_5-huge-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -192,21 +234,42 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\Result\rta_analysis_7-unschedulable.csv">
+        <entry key="\files\Result\rta_analysis_7-unschedulable-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\Result\wcrt_analysis vs_simulation_2-small.csv">
+        <entry key="\files\Result\rta_analysis_8-unschedulable-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\Result\wcrt_analysis vs_simulation_3-medium.csv">
+        <entry key="\files\Result\rta_analysis_9-unschedulable-test-case.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\files\Result\wcrt_analysis vs_simulation_10-unschedulable-test-case.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\files\Result\wcrt_analysis vs_simulation_2-small-test-case.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\files\Result\wcrt_analysis vs_simulation_3-medium-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -220,14 +283,7 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\Result\wcrt_analysis vs_simulation_4-large.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\files\Result\wcrt_analysis vs_simulation_5-huge.csv">
+        <entry key="\files\Result\wcrt_analysis vs_simulation_5-huge-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -241,49 +297,42 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\Result\wcrt_analysis vs_simulation_7-unschedulable.csv">
+        <entry key="\files\Result\wcrt_analysis vs_simulation_7-unschedulable-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\testcases\2-small\budgets.csv">
+        <entry key="\files\Result\wcrt_analysis vs_simulation_8-unschedulable-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\testcases\2-small\tasks.csv">
+        <entry key="\files\Result\wcrt_analysis vs_simulation_9-unschedulable-test-case.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\testcases\4-large\architecture.csv">
+        <entry key="\files\testcases\4-large-test-case\architecture.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\testcases\4-large\tasks.csv">
+        <entry key="\files\testcases\4-large-test-case\budgets.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\files\testcases\5-huge\tasks.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\files\testcases\7-unschedulable\tasks.csv">
+        <entry key="\files\testcases\4-large-test-case\tasks.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

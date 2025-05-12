@@ -108,7 +108,7 @@ public class Simulator {
             }
         }
         // Write the results to a CSV file
-        try (FileWriter writer = new FileWriter("files/Result/Simulator_" + testName + ".csv")) {
+        try (FileWriter writer = new FileWriter("files/Results/5-huge/Simulator_" + testName + ".csv")) {
             for (String line : lines) {
                 writer.write(line + "\n");
             }

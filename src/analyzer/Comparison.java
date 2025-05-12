@@ -6,9 +6,9 @@ import java.util.*;
 public class Comparison {
 
     public void compare(String testName) {
-        String solutionFile = "files/Result/Simulator_" + testName + ".csv";
-        String analysisFile = "files/Result/analysis_" + testName + ".csv";
-        String outputFile = "files/Result/comparison_" + testName + ".csv";
+        String solutionFile = "files/Results/5-huge/Simulator_" + testName + ".csv";
+        String analysisFile = "files/Results/5-huge/analysis_" + testName + ".csv";
+        String outputFile = "files/Results/5-huge/comparison_" + testName + ".csv";
 
         Map<String, String> simResults = new HashMap<>();
         Map<String, String> analysisResults = new HashMap<>();

@@ -13,8 +13,8 @@ public class WCRTComparison {
         try {
             System.out.println("\n=== WCRT vs Simulation Comparison ===");
 
-            String rtaFile = "files/Result/rta_analysis_" + testName + ".csv";
-            String simFile = "files/Result/Simulator_" + testName + ".csv";
+            String rtaFile = "files/Results/5-huge/rta_analysis_" + testName + ".csv";
+            String simFile = "files/Results/5-huge/Simulator_" + testName + ".csv";
 
             // ----Read RTA analysis results---
             Map<String, Double> rtaMap = new HashMap<>();
@@ -62,7 +62,7 @@ public class WCRTComparison {
             }
 
             // Save to CSV
-            try (FileWriter writer = new FileWriter("files/Result/wcrt_analysis vs_simulation_" + testName + ".csv")) {
+            try (FileWriter writer = new FileWriter("files/Results/5-huge/wcrt_analysis vs_simulation_" + testName + ".csv")) {
                 for (String outLine : outputLines) {
                     writer.write(outLine + "\n");
                 }

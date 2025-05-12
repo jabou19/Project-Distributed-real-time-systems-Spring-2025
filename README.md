@@ -53,8 +53,9 @@ javac Main.java
 3. Run the main program:
 java Main
 
-4. (Optional) Change the test case by modifying this line inside Main.java:
-String testFolder = "../testcases/5-huge";
+4. Choose the test case by modifying this line inside Main.java:
+in Main class, inside the main method:
+String testFolder = "testcases/testcases/5-huge-test-case";
 (Change 5-huge to 2-small, 3-medium, etc.)
 
 -------
@@ -70,7 +71,7 @@ Each test case folder contains:
 -------
 
 📄 Output Files
-Generated automatically inside src folder:
+Generated automatically inside FX :  files->Results->5-huge.
 
 Output File	Meaning
 solution_<testcase>.csv	Simulation results: avg/max RT, deadline misses.

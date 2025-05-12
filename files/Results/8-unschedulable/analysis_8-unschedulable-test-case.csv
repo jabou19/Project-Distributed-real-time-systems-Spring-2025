@@ -1,0 +1,8 @@
+component_id,alpha,delta,lcm,component_schedulable
+Camera_Sensor,0.364,7.000,300,0
+Image_Processor,0.286,5.000,100,1
+Bitmap_Processor,0.143,6.000,300,0
+Lidar_Sensor,0.333,2.000,150,0
+Control_Unit,0.667,2.000,600,1
+GPS_Sensor,0.231,10.000,100,0
+Communication_Unit,0.500,2.000,300,0

@@ -16,7 +16,6 @@ public class Main {
     public static void main(String[] args) {
         try {
             // ONLY CHANGE THIS ONE LINE PER TEST CASE!
-           // String testFolder = "../testcases/2-small";
             String testFolder = "files/testcases/5-huge-test-case"; //
             // Dynamically construct paths
             String taskFile = testFolder + "/tasks.csv";

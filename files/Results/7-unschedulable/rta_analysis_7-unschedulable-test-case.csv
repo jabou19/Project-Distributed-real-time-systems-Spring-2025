@@ -1,0 +1,17 @@
+task_name,component_id,wcrt,deadline,task_schedulable
+Task_0,Camera_Sensor,58.00,100.00,1
+Task_1,Camera_Sensor,7.00,20.00,1
+Task_2,Camera_Sensor,16.00,60.00,1
+Task_3,Camera_Sensor,292.00,300.00,1
+Task_6,Lidar_Sensor,-1.00,100.00,0
+Task_7,Lidar_Sensor,-1.00,10.00,0
+Task_8,Lidar_Sensor,-1.00,200.00,0
+Task_9,Lidar_Sensor,-1.00,400.00,0
+Task_10,Lidar_Sensor,-1.00,800.00,0
+Task_11,Lidar_Sensor,-1.00,5.00,0
+Task_12,GPS_Sensor,9.00,25.00,1
+Task_13,GPS_Sensor,61.00,75.00,1
+Task_14,Communication_Unit,12.00,20.00,1
+Task_15,Communication_Unit,98.00,100.00,1
+Task_16,Communication_Unit,19.00,25.00,1
+Task_17,Communication_Unit,35.00,50.00,1

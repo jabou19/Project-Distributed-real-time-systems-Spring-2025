@@ -1,0 +1,10 @@
+task_name,component_id,analysis_wcrt,simu_max_rt,match
+Task_10,N/A,25.0,0.0,YES
+Task_11,N/A,198.0,0.0,YES
+Task_1,N/A,22.0,15.0,YES
+Task_0,N/A,69.0,34.0,YES
+Task_4,N/A,-1.0,587.0,NO
+Task_3,N/A,84.0,44.0,YES
+Task_2,N/A,-1.0,171.0,NO
+Task_9,N/A,90.0,0.0,YES
+Task_8,N/A,10.0,0.0,YES

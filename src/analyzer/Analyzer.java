@@ -340,7 +340,7 @@ public class Analyzer {
             }
         }
 
-        try (FileWriter writer = new FileWriter("files/Result/analysis_" + testName + ".csv")) {
+        try (FileWriter writer = new FileWriter("files/Results/5-huge/analysis_" + testName + ".csv")) {
             for (String line : lines) {
                 writer.write(line + "\n");
             }
@@ -349,7 +349,7 @@ public class Analyzer {
             System.out.println(" Error writing analysis CSV: " + e.getMessage());
         }
 
-        try (FileWriter writer = new FileWriter("files/Result/rta_analysis_" + testName + ".csv")) {
+        try (FileWriter writer = new FileWriter("files/Results/5-huge/rta_analysis_" + testName + ".csv")) {
             for (String line : rtaLines) {
                 writer.write(line + "\n");
             }

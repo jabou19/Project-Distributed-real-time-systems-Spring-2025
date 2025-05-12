@@ -1,0 +1,7 @@
+component_id,sim_schedulable,analysis_schedulable,match
+Camera_Sensor,1,0,NO
+Lidar_Sensor,0,0,YES
+Image_Processor,1,1,YES
+Proximity_Sensor,1,0,NO
+GPS_Sensor,0,0,YES
+Communication_Unit,0,0,YES
